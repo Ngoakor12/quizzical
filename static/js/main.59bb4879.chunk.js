@@ -1,2 +1,0 @@
-(this.webpackJsonpquizzical=this.webpackJsonpquizzical||[]).push([[0],{10:function(e,t,c){"use strict";c.r(t);var n=c(1),i=c.n(n),r=c(3),o=c.n(r),s=(c(8),c(0));var a=function(){return Object(s.jsx)("h1",{children:"Hello React!"})};o.a.render(Object(s.jsx)(i.a.StrictMode,{children:Object(s.jsx)(a,{})}),document.getElementById("root"))},8:function(e,t,c){}},[[10,1,2]]]);
-//# sourceMappingURL=main.59bb4879.chunk.js.map
