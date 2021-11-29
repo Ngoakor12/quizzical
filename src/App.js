@@ -6,8 +6,13 @@ import { nanoid } from "nanoid";
 function App() {
   const [isReady, setIsReady] = useState(false);
   const [questions, setQuestions] = useState([]);
+  const [isCompleted, setIsCompleted] = useState(true);
 
   useEffect(() => {
+    getQuestions();
+  }, []);
+
+  function getQuestions() {
     fetch(
       "https://opentdb.com/api.php?amount=5&category=9&difficulty=easy&type=multiple"
     )
@@ -33,7 +38,7 @@ function App() {
         });
         setQuestions(questionData);
       });
-  }, [questions.incorrect_answers]);
+  }
 
   console.log(questions);
 
@@ -42,7 +47,7 @@ function App() {
   }
 
   function toggleSelected(id) {
-    console.log("clicked", id);
+    // console.log("clicked", id);
     setQuestions((prevQuestions) =>
       prevQuestions.map((question) => ({
         ...question,
@@ -57,28 +62,60 @@ function App() {
     );
   }
 
-  let quiz = questions.map((questionContainer) => {
+  let quizQuestions = questions.map((questionContainer) => {
     const answers = [...questionContainer.incorrect_answers];
     return (
       <div key={nanoid()} className="question-container">
         <div className="question">{questionContainer.question}</div>
-        {answers.map((answer) => (
-          <div
-            key={nanoid()}
-            className="answer"
-            onClick={() => toggleSelected(answer.id)}
-            style={{
-              backgroundColor: answer.isSelected ? "red" : "none",
-            }}
-          >
-            {answer.answer}
-          </div>
-        ))}
+        <div className="answers">
+          {answers.map((answer) => (
+            <div
+              key={nanoid()}
+              className="answer"
+              onClick={() => toggleSelected(answer.id)}
+              style={{
+                backgroundColor: answer.isSelected
+                  ? "hsl(230, 61%, 90%)"
+                  : "none",
+                border: answer.isSelected
+                  ? "0.794239px solid hsl(230, 61%, 90%)"
+                  : "0.794239px solid #4d5b9e",
+              }}
+            >
+              {answer.answer}
+            </div>
+          ))}
+        </div>
+        <hr className="question-divider" />
       </div>
     );
   });
 
-  return <main>{isReady ? quiz : <StartScreen startGame={startGame} />}</main>;
+  function restartGame() {
+    getQuestions();
+    setIsCompleted((prevIsCompleted) => !prevIsCompleted);
+  }
+
+  let quizButton = isCompleted ? (
+    <div className="quiz-button-section">
+      <p className="quiz-score">You scored 5/5 correct answers</p>
+      <button className="quiz-button" onClick={restartGame}>
+        Play again
+      </button>
+    </div>
+  ) : (
+    <div className="quiz-button-section">
+      <button className="quiz-button">Check answer</button>
+    </div>
+  );
+
+  let quiz = (
+    <>
+      {quizQuestions}
+      {quizButton}
+    </>
+  );
+  return <>{isReady ? quiz : <StartScreen startGame={startGame} />}</>;
 }
 
 export default App;
