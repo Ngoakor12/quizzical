@@ -1,23 +1,5 @@
-const Question = (props) => {
-  const answers = [
-    ...props.question.incorrect_answers,
-    props.question.correct_answer,
-  ];
+// const Question = (props) => {
+//   return <div className="question">{props.question.question}</div>;
+// };
 
-  const answersElements = answers
-    .map((answer) => (
-      <div key={answer} onClick={props.toggleSelected}>
-        {answer}
-      </div>
-    ))
-    .sort(() => Math.random() - 0.5);
-
-  return (
-    <div>
-      {props.question.question}
-      {answersElements}
-    </div>
-  );
-};
-
-export default Question;
+// export default Question;

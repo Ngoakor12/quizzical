@@ -1,14 +1,23 @@
-import Question from "../Question/Question";
+// import { nanoid } from "nanoid";
+// import Question from "../Question/Question";
 
-const Quiz = (props) => {
-  const questions = props.questions.map((question) => (
-    <Question
-      key={question.question}
-      question={question}
-      toggleSelected={props.toggleSelected}
-    />
-  ));
-  return <div>{questions}</div>;
-};
+// const Quiz = (props) => {
+//   const questions = props.questions.map((question) => {
+//     return (
+//       <div
+//         className="question-container"
+//         key={nanoid()}
+//         toggleSelected={props.toggleSelected}
+//       >
+//         <Question />
+//         <div className="question" key={nanoid()}>
+//           {question.question}
+//         </div>
+//       </div>
+//     );
+//   });
 
-export default Quiz;
+//   return <div>{questions}</div>;
+// };
+
+// export default Quiz;
