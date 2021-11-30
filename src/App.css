@@ -121,6 +121,7 @@ code {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   gap: 10px;
 }
 
@@ -131,6 +132,12 @@ code {
   font-size: 16px;
   line-height: 19px;
   color: #293264;
+}
+@media only screen and (min-width: 360px) {
+  .quiz-button-section {
+    display: flex;
+    flex-direction: row;
+  }
 }
 
 .quiz-button {
