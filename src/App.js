@@ -39,7 +39,7 @@ function App() {
                 isSelected: false,
                 id: nanoid(),
               },
-            ],
+            ].sort(() => Math.random() - 0.5),
           };
         });
         setQuestions(questionData);
@@ -78,6 +78,7 @@ function App() {
   function restartGame() {
     getQuestions();
     setIsCheckingAnswers(false);
+    setScore(0);
   }
 
   function calculateScore() {
