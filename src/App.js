@@ -10,13 +10,13 @@ function App() {
   const [score, setScore] = useState(0);
 
   useEffect(() => {
-    getQuestions();
+    getQuestions(
+      "https://opentdb.com/api.php?amount=5&category=9&type=multiple"
+    );
   }, []);
 
-  function getQuestions() {
-    fetch(
-      "https://opentdb.com/api.php?amount=5&category=9&difficulty=easy&type=multiple"
-    )
+  function getQuestions(url) {
+    fetch(url)
       .then((res) => res.json())
       .then((data) => {
         const questionData = data.results.map((question) => {
@@ -72,7 +72,9 @@ function App() {
   }
 
   function restartGame() {
-    getQuestions();
+    getQuestions(
+      "https://opentdb.com/api.php?amount=5&category=9&type=multiple"
+    );
     setIsCheckingAnswers(false);
     setScore(0);
   }
