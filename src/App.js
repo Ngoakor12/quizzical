@@ -78,13 +78,25 @@ function App() {
   }
 
   function calculateScore() {
-    setIsCheckingAnswers(true);
+    // check if all questions are answered
+    let questionsAnswered = 0;
     questions.forEach((question) => {
       question.answers.forEach((answer) => {
-        if (answer.isSelected && answer.isCorrect)
-          setScore((prevScore) => prevScore + 1);
+        if (answer.isSelected) questionsAnswered++;
       });
     });
+
+    if (questionsAnswered !== 5) {
+      alert("Please answer all the questions to check answers");
+    } else {
+      setIsCheckingAnswers(true);
+      questions.forEach((question) => {
+        question.answers.forEach((answer) => {
+          if (answer.isSelected && answer.isCorrect)
+            setScore((prevScore) => prevScore + 1);
+        });
+      });
+    }
   }
 
   let quizQuestions = questions.map((questionContainer) => {
