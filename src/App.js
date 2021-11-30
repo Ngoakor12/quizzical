@@ -6,7 +6,6 @@ import { nanoid } from "nanoid";
 function App() {
   const [isReady, setIsReady] = useState(false);
   const [questions, setQuestions] = useState([]);
-  // const [isCompleted, setIsCompleted] = useState(false);
   const [isCheckingAnswer, setIsCheckingAnswers] = useState(false);
   const [score, setScore] = useState(0);
 
@@ -46,14 +45,11 @@ function App() {
       });
   }
 
-  // console.log(questions);
-
   function startGame() {
     setIsReady(true);
   }
 
   function toggleSelected(answerId, questionId) {
-    // console.log("clicked", id);
     setQuestions((prevQuestions) =>
       prevQuestions.map((question) => {
         return {
