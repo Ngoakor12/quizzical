@@ -46,19 +46,26 @@ function App() {
     setIsReady(true);
   }
 
-  function toggleSelected(id) {
+  function toggleSelected(answerId, questionId) {
     // console.log("clicked", id);
     setQuestions((prevQuestions) =>
-      prevQuestions.map((question) => ({
-        ...question,
-        incorrect_answers: question.incorrect_answers.map((answerObj) => {
-          if (answerObj.id === id) {
-            return { ...answerObj, isSelected: !answerObj.isSelected };
-          } else {
-            return answerObj;
-          }
-        }),
-      }))
+      prevQuestions.map((question) => {
+        return {
+          ...question,
+          incorrect_answers: question.incorrect_answers.map((answerObj) => {
+            if (answerObj.id === answerId) {
+              return { ...answerObj, isSelected: !answerObj.isSelected };
+            } else if (
+              answerObj.id !== answerId &&
+              question.id === questionId
+            ) {
+              return { ...answerObj, isSelected: false };
+            } else {
+              return answerObj;
+            }
+          }),
+        };
+      })
     );
   }
 
@@ -72,14 +79,14 @@ function App() {
             <div
               key={nanoid()}
               className="answer"
-              onClick={() => toggleSelected(answer.id)}
+              onClick={() => toggleSelected(answer.id, questionContainer.id)}
               style={{
                 backgroundColor: answer.isSelected
                   ? "hsl(230, 61%, 90%)"
                   : "none",
                 border: answer.isSelected
-                  ? "0.794239px solid hsl(230, 61%, 90%)"
-                  : "0.794239px solid #4d5b9e",
+                  ? "0.8px solid hsl(230, 61%, 90%)"
+                  : "0.8px solid #4d5b9e",
               }}
             >
               {answer.answer}
