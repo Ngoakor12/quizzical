@@ -133,12 +133,6 @@ code {
   line-height: 19px;
   color: #293264;
 }
-@media only screen and (min-width: 360px) {
-  .quiz-button-section {
-    display: flex;
-    flex-direction: row;
-  }
-}
 
 .quiz-button {
   padding: 15px 25px;
@@ -146,7 +140,7 @@ code {
   font-style: normal;
   font-weight: 600;
   font-size: 16px;
-  line-height: 12px;
+  line-height: 18px;
   text-align: center;
   color: #f5f7fb;
   background-color: #4d5b9e;
@@ -157,6 +151,13 @@ code {
 
 .quiz-button:hover {
   background-color: hsl(230, 34%, 56%);
+}
+
+@media (min-width: 360px) {
+  .quiz-button-section {
+    display: flex;
+    flex-direction: row;
+  }
 }
 
 /* .correct-answer {
