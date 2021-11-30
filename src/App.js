@@ -6,7 +6,9 @@ import { nanoid } from "nanoid";
 function App() {
   const [isReady, setIsReady] = useState(false);
   const [questions, setQuestions] = useState([]);
-  const [isCompleted, setIsCompleted] = useState(true);
+  // const [isCompleted, setIsCompleted] = useState(false);
+  const [isCheckingAnswer, setIsCheckingAnswers] = useState(false);
+  const [score, setScore] = useState(0);
 
   useEffect(() => {
     getQuestions();
@@ -20,16 +22,20 @@ function App() {
       .then((data) => {
         const questionData = data.results.map((question) => {
           return {
-            ...question,
+            question: question.question,
+            difficulty: question.difficulty,
+            category: question.category,
             id: nanoid(),
-            incorrect_answers: [
+            answers: [
               ...question.incorrect_answers.map((answer) => ({
                 answer: answer,
+                isCorrect: false,
                 isSelected: false,
                 id: nanoid(),
               })),
               {
                 answer: question.correct_answer,
+                isCorrect: true,
                 isSelected: false,
                 id: nanoid(),
               },
@@ -52,7 +58,7 @@ function App() {
       prevQuestions.map((question) => {
         return {
           ...question,
-          incorrect_answers: question.incorrect_answers.map((answerObj) => {
+          answers: question.answers.map((answerObj) => {
             if (answerObj.id === answerId) {
               return { ...answerObj, isSelected: !answerObj.isSelected };
             } else if (
@@ -69,8 +75,23 @@ function App() {
     );
   }
 
+  function restartGame() {
+    getQuestions();
+    setIsCheckingAnswers(false);
+  }
+
+  function calculateScore() {
+    setIsCheckingAnswers(true);
+    questions.forEach((question) => {
+      question.answers.forEach((answer) => {
+        if (answer.isSelected && answer.isCorrect)
+          setScore((prevScore) => prevScore + 1);
+      });
+    });
+  }
+
   let quizQuestions = questions.map((questionContainer) => {
-    const answers = [...questionContainer.incorrect_answers];
+    const answers = [...questionContainer.answers];
     return (
       <div key={nanoid()} className="question-container">
         <div className="question">{questionContainer.question}</div>
@@ -98,21 +119,18 @@ function App() {
     );
   });
 
-  function restartGame() {
-    getQuestions();
-    setIsCompleted((prevIsCompleted) => !prevIsCompleted);
-  }
-
-  let quizButton = isCompleted ? (
+  let quizButton = isCheckingAnswer ? (
     <div className="quiz-button-section">
-      <p className="quiz-score">You scored 5/5 correct answers</p>
+      <p className="quiz-score">You scored {score}/5 correct answers</p>
       <button className="quiz-button" onClick={restartGame}>
         Play again
       </button>
     </div>
   ) : (
     <div className="quiz-button-section">
-      <button className="quiz-button">Check answer</button>
+      <button className="quiz-button" onClick={calculateScore}>
+        Check answer
+      </button>
     </div>
   );
 
