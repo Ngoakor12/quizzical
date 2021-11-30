@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/quizzical/static/css/main.1cb9cde5.chunk.css",
-    "main.js": "/quizzical/static/js/main.e93d8500.chunk.js",
-    "main.js.map": "/quizzical/static/js/main.e93d8500.chunk.js.map",
+    "main.css": "/quizzical/static/css/main.be599c20.chunk.css",
+    "main.js": "/quizzical/static/js/main.2614b0ca.chunk.js",
+    "main.js.map": "/quizzical/static/js/main.2614b0ca.chunk.js.map",
     "runtime-main.js": "/quizzical/static/js/runtime-main.1d1f53e0.js",
     "runtime-main.js.map": "/quizzical/static/js/runtime-main.1d1f53e0.js.map",
-    "static/js/2.846b9e1c.chunk.js": "/quizzical/static/js/2.846b9e1c.chunk.js",
-    "static/js/2.846b9e1c.chunk.js.map": "/quizzical/static/js/2.846b9e1c.chunk.js.map",
+    "static/js/2.cd905067.chunk.js": "/quizzical/static/js/2.cd905067.chunk.js",
+    "static/js/2.cd905067.chunk.js.map": "/quizzical/static/js/2.cd905067.chunk.js.map",
     "index.html": "/quizzical/index.html",
-    "static/css/main.1cb9cde5.chunk.css.map": "/quizzical/static/css/main.1cb9cde5.chunk.css.map",
-    "static/js/2.846b9e1c.chunk.js.LICENSE.txt": "/quizzical/static/js/2.846b9e1c.chunk.js.LICENSE.txt"
+    "static/css/main.be599c20.chunk.css.map": "/quizzical/static/css/main.be599c20.chunk.css.map",
+    "static/js/2.cd905067.chunk.js.LICENSE.txt": "/quizzical/static/js/2.cd905067.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.1d1f53e0.js",
-    "static/js/2.846b9e1c.chunk.js",
-    "static/css/main.1cb9cde5.chunk.css",
-    "static/js/main.e93d8500.chunk.js"
+    "static/js/2.cd905067.chunk.js",
+    "static/css/main.be599c20.chunk.css",
+    "static/js/main.2614b0ca.chunk.js"
   ]
 }
