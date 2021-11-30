@@ -46,7 +46,7 @@ function App() {
       });
   }
 
-  console.log(questions);
+  // console.log(questions);
 
   function startGame() {
     setIsReady(true);
@@ -97,23 +97,45 @@ function App() {
       <div key={nanoid()} className="question-container">
         <div className="question">{questionContainer.question}</div>
         <div className="answers">
-          {answers.map((answer) => (
-            <div
-              key={nanoid()}
-              className="answer"
-              onClick={() => toggleSelected(answer.id, questionContainer.id)}
-              style={{
-                backgroundColor: answer.isSelected
-                  ? "hsl(230, 61%, 90%)"
+          {answers.map((answer) => {
+            const checkingAnswerStyles = {
+              backgroundColor:
+                answer.isSelected && answer.isCorrect
+                  ? "#94d7a2"
+                  : answer.isSelected && !answer.isCorrect
+                  ? "#f8bcbc"
+                  : !answer.isSelected && answer.isCorrect
+                  ? "#94d7a2"
                   : "none",
-                border: answer.isSelected
-                  ? "0.8px solid hsl(230, 61%, 90%)"
+              border:
+                answer.isSelected && answer.isCorrect
+                  ? "0.8px solid #94d7a2"
+                  : answer.isSelected && !answer.isCorrect
+                  ? "0.8px solid #f8bcbc"
+                  : !answer.isSelected && answer.isCorrect
+                  ? "#94d7a2"
                   : "0.8px solid #4d5b9e",
-              }}
-            >
-              {answer.answer}
-            </div>
-          ))}
+              opacity: !answer.isSelected && !answer.isCorrect ? "0.5" : "1",
+            };
+            const normalStyles = {
+              backgroundColor: answer.isSelected
+                ? "hsl(230, 61%, 90%)"
+                : "none",
+              border: answer.isSelected
+                ? "0.8px solid hsl(230, 61%, 90%)"
+                : "0.8px solid #4d5b9e",
+            };
+            return (
+              <div
+                key={nanoid()}
+                className="answer"
+                onClick={() => toggleSelected(answer.id, questionContainer.id)}
+                style={isCheckingAnswer ? checkingAnswerStyles : normalStyles}
+              >
+                {answer.answer}
+              </div>
+            );
+          })}
         </div>
         <hr className="question-divider" />
       </div>
