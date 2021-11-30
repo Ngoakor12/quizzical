@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/quizzical/static/css/main.ee135111.chunk.css",
+    "main.css": "/quizzical/static/css/main.8230f99e.chunk.css",
     "main.js": "/quizzical/static/js/main.2614b0ca.chunk.js",
     "main.js.map": "/quizzical/static/js/main.2614b0ca.chunk.js.map",
     "runtime-main.js": "/quizzical/static/js/runtime-main.1d1f53e0.js",
@@ -8,13 +8,13 @@
     "static/js/2.cd905067.chunk.js": "/quizzical/static/js/2.cd905067.chunk.js",
     "static/js/2.cd905067.chunk.js.map": "/quizzical/static/js/2.cd905067.chunk.js.map",
     "index.html": "/quizzical/index.html",
-    "static/css/main.ee135111.chunk.css.map": "/quizzical/static/css/main.ee135111.chunk.css.map",
+    "static/css/main.8230f99e.chunk.css.map": "/quizzical/static/css/main.8230f99e.chunk.css.map",
     "static/js/2.cd905067.chunk.js.LICENSE.txt": "/quizzical/static/js/2.cd905067.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.1d1f53e0.js",
     "static/js/2.cd905067.chunk.js",
-    "static/css/main.ee135111.chunk.css",
+    "static/css/main.8230f99e.chunk.css",
     "static/js/main.2614b0ca.chunk.js"
   ]
 }
