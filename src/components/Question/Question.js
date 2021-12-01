@@ -1,5 +1,5 @@
-// const Question = (props) => {
-//   return <div className="question">{props.question.question}</div>;
-// };
+const Question = (props) => {
+  return <div className="question">{props.question}</div>;
+};
 
-// export default Question;
+export default Question;
