@@ -10,9 +10,15 @@ function Quiz() {
 
   useEffect(() => {
     getQuestions(
-      "https://opentdb.com/api.php?amount=5&category=9&type=multiple"
+      "https://opentdb.com/api.php?amount=5&category=9&type=multiple&encode=base64"
     );
   }, []);
+
+  // - This function fixes the issue of not rendering html entities correctly.
+  // - The data has to be encoded as base64 in the api url(e.g. &encode=base64).
+  function base64ToUTF8(str) {
+    return decodeURIComponent(escape(window.atob(str)));
+  }
 
   function getQuestions(url) {
     fetch(url)
@@ -20,19 +26,19 @@ function Quiz() {
       .then((data) => {
         const questionData = data.results.map((question) => {
           return {
-            question: question.question,
+            question: base64ToUTF8(question.question),
             difficulty: question.difficulty,
             category: question.category,
             id: nanoid(),
             answers: [
               ...question.incorrect_answers.map((answer) => ({
-                answer: answer,
+                answer: base64ToUTF8(answer),
                 isCorrect: false,
                 isSelected: false,
                 id: nanoid(),
               })),
               {
-                answer: question.correct_answer,
+                answer: base64ToUTF8(question.correct_answer),
                 isCorrect: true,
                 isSelected: false,
                 id: nanoid(),
@@ -68,7 +74,7 @@ function Quiz() {
 
   function restartGame() {
     getQuestions(
-      "https://opentdb.com/api.php?amount=5&category=9&type=multiple"
+      "https://opentdb.com/api.php?amount=5&category=9&type=multiple&encode=base64"
     );
     setIsCheckingAnswers(false);
     setScore(0);
