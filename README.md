@@ -1,5 +1,5 @@
 # Quizzical
-A React web app for learning and testing your trivia knowledge. [Play here](https://www.ngoako.com/quizzical/)🕹
+A React game for learning and testing your trivia knowledge. [Play here](https://www.ngoako.com/quizzical/)🕹
 
 Go to [Setup.md](https://github.com/Ngoakor12/quizzical/blob/master/Setup.md) for instructions on how to run the project locally.
 
