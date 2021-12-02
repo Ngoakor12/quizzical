@@ -12,6 +12,7 @@ function Quiz() {
     getQuestions(
       "https://opentdb.com/api.php?amount=5&category=9&type=multiple&encode=base64"
     );
+    // eslint-disable-next-line
   }, []);
 
   // - This function fixes the issue of not rendering html entities correctly.
