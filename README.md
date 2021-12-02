@@ -1,8 +1,6 @@
 # Quizzical
 A React game for learning and testing your trivia knowledge. [Play here](https://www.ngoako.com/quizzical/)🕹
 
-Go to [Setup.md](https://github.com/Ngoakor12/quizzical/blob/master/Setup.md) for instructions on how to run the project locally.
-
 ## My role(s)
 - Developer
 
@@ -78,6 +76,27 @@ Go to [Setup.md](https://github.com/Ngoakor12/quizzical/blob/master/Setup.md) fo
     }
   ]
 }
+```
+
+## Setup locally
+
+clone the project
+```
+git clone git@github.com:Ngoakor12/quizzical.git
+```
+enter project folder
+```
+cd quizzical
+```
+
+install dependencies
+```
+npm install
+```
+
+run
+```
+npm start
 ```
 
 ## credits
