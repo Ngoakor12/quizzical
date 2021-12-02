@@ -7,9 +7,10 @@ Go to [Setup.md](https://github.com/Ngoakor12/quizzical/blob/master/Setup.md) fo
 - Developer
 
 ## Features/enhancements
-- [ ] Feat: Sound effects
-- [ ] Feat: Ability to choose your own topics and difficulty
-- [ ] Feat: Personal scoreboard
+- [ ] Sound effects
+- [ ] Ability to choose your own topics and difficulty
+- [ ] Personal scoreboard
+- [ ] Visible Loading animations
 - [ ] Unit testing
 
 ## Tech stack
