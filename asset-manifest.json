@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/quizzical/static/css/main.e1357098.chunk.css",
-    "main.js": "/quizzical/static/js/main.c08762ae.chunk.js",
-    "main.js.map": "/quizzical/static/js/main.c08762ae.chunk.js.map",
+    "main.js": "/quizzical/static/js/main.3fb33660.chunk.js",
+    "main.js.map": "/quizzical/static/js/main.3fb33660.chunk.js.map",
     "runtime-main.js": "/quizzical/static/js/runtime-main.1d1f53e0.js",
     "runtime-main.js.map": "/quizzical/static/js/runtime-main.1d1f53e0.js.map",
     "static/js/2.8daf8d17.chunk.js": "/quizzical/static/js/2.8daf8d17.chunk.js",
@@ -15,6 +15,6 @@
     "static/js/runtime-main.1d1f53e0.js",
     "static/js/2.8daf8d17.chunk.js",
     "static/css/main.e1357098.chunk.css",
-    "static/js/main.c08762ae.chunk.js"
+    "static/js/main.3fb33660.chunk.js"
   ]
 }
