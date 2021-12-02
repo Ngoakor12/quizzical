@@ -80,7 +80,7 @@ Go to [Setup.md](https://github.com/Ngoakor12/quizzical/blob/master/Setup.md) fo
 ```
 
 ## credits
-- The idea and design for the MVP of this project is from [Scrimba's Learn react course](https://scrimba.com/learn/learnreact).
+- The idea and design for the MVP is a solo project is from [Scrimba's Learn react course](https://scrimba.com/learn/learnreact).
 - All the quiz information is from the [Open Trivia Database](https://opentdb.com/).
 
 <!--## screenshots-->
