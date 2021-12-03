@@ -153,6 +153,19 @@ code {
   background-color: hsl(230, 34%, 56%);
 }
 
+footer {
+  font-family: Inter, sans-serif;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  color: #293264;
+  padding: 30px 0;
+}
+
+footer a {
+  color: #293264;
+}
+
 @media (min-width: 360px) {
   .quiz-button-section {
     display: flex;

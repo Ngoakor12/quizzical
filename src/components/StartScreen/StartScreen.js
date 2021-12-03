@@ -1,3 +1,4 @@
+import Footer from "../Footer/Footer";
 const StartScreen = (props) => {
   return (
     <div className="start-screen">
@@ -6,6 +7,7 @@ const StartScreen = (props) => {
       <button className="start-quiz-button" onClick={props.startGame}>
         Start Game
       </button>
+      <Footer />
     </div>
   );
 };

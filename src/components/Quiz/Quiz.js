@@ -2,6 +2,7 @@ import { nanoid } from "nanoid";
 import { useState, useEffect } from "react";
 import Question from "../Question/Question";
 import Answer from "../Answer/Answer";
+import Footer from "../Footer/Footer";
 
 function Quiz() {
   const [questions, setQuestions] = useState([]);
@@ -147,6 +148,7 @@ function Quiz() {
     <>
       {quizQuestions}
       {quizButtonSection}
+      <Footer />
     </>
   );
 }
