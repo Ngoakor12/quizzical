@@ -1,8 +1,14 @@
 # Quizzical
 A React game for learning and testing your trivia knowledge. [Play here](https://www.ngoako.com/quizzical/)🕹
 
-## My role(s)
-- Developer
+## Aim/Purpose
+My aim with building this project was to practice React basics and to consolidate what I've learned so far. The project itself doesn't solve any major personal problems except teach me a few things I didn't know.
+
+## Tech stack
+- React
+- Javascript
+- CSS
+- HTML
 
 ## Features/enhancements
 - [ ] Sound effects
@@ -10,12 +16,6 @@ A React game for learning and testing your trivia knowledge. [Play here](https:/
 - [ ] Personal scoreboard
 - [ ] Visible Loading animations
 - [ ] Unit testing
-
-## Tech stack
-- React
-- Javascript
-- CSS
-- HTML
 
 ## Challenges
 - **Encoding issues**: Questions with HTML entities didn't render as they would in a normal html file. I solved this by requesting the base64 encoding version of the data and ran the Question and Answers' strings through a function to convert the hmtl entities to render as expected in JSX.
