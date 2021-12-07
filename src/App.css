@@ -42,14 +42,17 @@ code {
 .quiz-title {
   font-family: Karla;
   font-weight: bold;
-  font-size: 31px;
+  font-size: 41px;
   color: #293264;
+  padding: 10px 0;
 }
 
 .quiz-description {
   font-family: Inter;
   font-weight: regular;
   font-size: 16px;
+  max-width: 280px;
+  line-height: 1.6;
 }
 
 .start-quiz-button {
@@ -61,8 +64,7 @@ code {
   text-align: center;
   color: #f5f7fb;
   background-color: #4d5b9e;
-  width: 193px;
-  height: 52px;
+  padding: 10px 20px;
   border: 0;
   border-radius: 8px;
   cursor: pointer;
@@ -94,13 +96,12 @@ code {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 8px 15px;
-
+  padding: 10px 20px;
   height: 20.65px;
   font-family: Inter;
-  font-weight: 600;
-  font-size: 10.24px;
-  line-height: 12px;
+  font-size: 14px;
+  /* font-weight: 600; */
+  /* line-height: 12px; */
   text-align: center;
   color: #293264;
   border: 0.794239px solid #4d5b9e;
@@ -164,6 +165,45 @@ footer {
 
 footer a {
   color: #293264;
+}
+#custom-game-form {
+  display: flex;
+  flex-direction: column;
+  /* align-items: flex-start; */
+  gap: 8px;
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+}
+.custom-game-dropdown {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 5px;
+}
+
+select {
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  padding: 5px;
+}
+
+label {
+  font-size: 16px;
+}
+
+select#category,
+select#difficulty {
+  padding: 10px 20px;
+  min-width: 280px;
+  max-width: 280px;
+  border-radius: 8px;
+}
+
+.game-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 @media (min-width: 360px) {

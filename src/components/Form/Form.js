@@ -33,8 +33,8 @@ const Form = (props) => {
   ];
 
   return (
-    <form>
-      <div>
+    <form id="custom-game-form">
+      <div className="custom-game-dropdown">
         <label htmlFor="category">Category </label>
         <select name="category" id="category" onChange={props.handleFormChange}>
           {triviaCategories.map((category) => (
@@ -44,7 +44,7 @@ const Form = (props) => {
           ))}
         </select>
       </div>
-      <div>
+      <div className="custom-game-dropdown">
         <label htmlFor="difficulty">Difficulty </label>
         <select
           name="difficulty"
