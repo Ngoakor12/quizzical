@@ -12,7 +12,7 @@ My aim with building this project was to practice React basics and to consolidat
 
 ## Features/enhancements
 - [ ] Sound effects
-- [ ] Ability to choose your own topics and difficulty
+- [x] Ability to choose your own topics and difficulty
 - [ ] Personal scoreboard
 - [ ] Visible Loading animations
 - [ ] Unit testing
