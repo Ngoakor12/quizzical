@@ -18,7 +18,7 @@ My aim with building this project was to practice React basics and to consolidat
 - [ ] Unit testing
 
 ## Challenges
-- **Encoding issues**: Questions with HTML entities didn't render as they would in a normal html file. I solved this by requesting the base64 encoding version of the data and ran the Question and Answers' strings through a function to convert the hmtl entities to render as expected in JSX.
+- **Encoding issues**: Questions with HTML entities didn't render as they would in a normal html file. I solved this by requesting the base64 encoding version of the data and ran the Question and Answers' strings through a function to convert the html entities to render as expected in JSX.
 - **Organization of received data**: The data received from the API was a lot and tough to use in a quiz game. I solve this by storing only the data I was going to use in state and arranged it differently to make it easy to use for my quiz game.
 
 **Example of original data from API**
