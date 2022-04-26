@@ -1,5 +1,5 @@
 # Quizzical
-A React game for learning and testing your trivia knowledge. [Play here](https://www.ngoako.com/quizzical/)🕹
+A React game for learning and testing your trivia knowledge. [Play here](https://ngoakor12.github.io/quizzical/)🕹
 
 ## Aim/Purpose
 My aim with building this project was to practice React basics and to consolidate what I've learned so far. The project itself doesn't solve any major personal problems except teach me a few things I didn't know.
